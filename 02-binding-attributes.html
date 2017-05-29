@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="lib/angular.js"></script>
+<body>
+
+<h1>Different binding attributes</h1>
+
+<pre>
+AngularJS normalizes an element's tag and attribute name to determine which elements match which directives. 
+We typically refer to directives by their case-sensitive camelCase normalized name (e.g. ngModel). 
+However, since HTML is case-insensitive, we refer to directives in the DOM by lower-case forms, 
+typically using dash-delimited attributes on DOM elements (e.g. ng-model).
+
+The normalization process is as follows:
+Strip x- and data- from the front of the element/attributes.
+Convert the :, -, or _-delimited name to camelCase.
+</pre>
+
+<div ng-app="">
+  <p>Name : <input type="text" ng-model="name"></p>
+  <span>{{name}}</span> <br/>
+  <span ng-bind="name"></span> <br/>
+  <span ng:bind="name"></span> <br/>
+  <span ng_bind="name"></span> <br/>
+  <span data-ng-bind="name"></span> <br/>
+  <span x-ng-bind="name"></span> <br/>
+</div>
+
+</body>
+</html>

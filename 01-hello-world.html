@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="lib/angular.js"></script>
+<body>
+
+<pre>
+The ng-app directive defines an AngularJS application.
+The ng-model directive binds the value of HTML controls (input, select, textarea) to application data.
+The ng-bind directive binds application data to the HTML view.
+</pre>
+
+<h1>Hello world</h1>
+
+<div ng-app="">
+  <p>Message : <input type="text" ng-model="msg"></p>
+  <span>Bound message: {{msg}}</span>
+</div>
+
+</body>
+</html>
